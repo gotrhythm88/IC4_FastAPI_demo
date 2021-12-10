@@ -1,9 +1,21 @@
 from typing import Optional
 from fastapi import FastAPI
 import random
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+origins = {
+    "https://codepen.io/powerupta/pen/VwMKZXr?editors=0011"
+}
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = origins,
+    allow_credentials = True,
+    allow_methods = ["*"],
+    allow_headers = ["*"],
+)
 
 @app.get("/")
 def read_root():
