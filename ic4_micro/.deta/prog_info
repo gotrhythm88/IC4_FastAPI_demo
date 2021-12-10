@@ -1,0 +1,1 @@
+{"id":"9152cd6b-8c73-4065-a9d4-9abbab0ad6ce","space":5215,"runtime":"python3.7","name":"ic4_micro","path":"61w1ub","project":"b0hpoose","account":"144798365827","region":"us-east-1","deps":["fastapi"],"envs":null,"public":true,"log_level":"debug","cron":""}
