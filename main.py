@@ -5,9 +5,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-origins = {
-    "https://codepen.io/"
-}
+origins = [
+    "https://codepen.io/",
+    "https://cdpn.io",
+]
 
 app.add_middleware(
     CORSMiddleware,
