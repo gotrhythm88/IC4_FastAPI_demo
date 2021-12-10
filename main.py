@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = {
-    "https://codepen.io/powerupta/pen/VwMKZXr?editors=0011"
+    "https://codepen.io/"
 }
 
 app.add_middleware(
