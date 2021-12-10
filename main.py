@@ -47,18 +47,18 @@ def score_rps(player_choice: str, api_choice: str):
 
 def scoregame(api_choice, player_choice):
     if api_choice==player_choice:
-        return "tie"
+        return "It's a TIE"
     elif api_choice=="rock" and player_choice=="paper":
-        return "player"
+        return "YOU WIN!!"
     elif api_choice=="rock" and player_choice=="scissors":
-        return "api"
+        return "The API defeated you"
     elif api_choice=="paper" and player_choice=="scissors":
-        return "player"
+        return "YOU WIN!!"
     elif api_choice=="paper" and player_choice=="rock":
-        return "api"
+        return "The API defeated you"
     elif api_choice=="scissors" and player_choice=="rock":
-        return "player"
+        return "YOU WIN!!"
     elif api_choice=="scissors" and player_choice=="paper":
-        return "api"
+        return "The API defeated you"
     else:
         return "unable to determine winner"
