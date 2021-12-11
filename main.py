@@ -1,4 +1,3 @@
-from typing import Optional
 from fastapi import FastAPI
 import random
 from fastapi.middleware.cors import CORSMiddleware
@@ -20,25 +19,12 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"Greeting": "This is an RPS player"}
+    return {"Greetings": "This is an RPS player"}
 
 
-@app.get("/rps_play/")
-def play_rps():
-    api_choice = random.choice(["rock","paper","scissors"])
-    return {"api_play": api_choice, "status": "success"}
-
-@app.get("/rps_score/player/{player_choice}")
+@app.get("/rps_score/playermove/{player_choice}")
 def score_rps(player_choice: str):
     api_choice = random.choice(["rock","paper","scissors"])
-    score = {}
-    score["result"] = scoregame(api_choice, player_choice)
-    score["api"] = api_choice
-    score["status"] = "success"
-    return score
-
-@app.get("/rps_score/player/{player_choice}/api/{api_choice}")
-def score_rps(player_choice: str, api_choice: str):
     score = {}
     score["result"] = scoregame(api_choice, player_choice)
     score["api"] = api_choice
